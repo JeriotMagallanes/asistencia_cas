@@ -1,0 +1,105 @@
+[06-Oct-2022 11:55:13 America/Lima] PHP Warning:  Unknown: failed to open stream: No such file or directory in Unknown on line 0
+[06-Oct-2022 11:55:13 America/Lima] PHP Fatal error:  Unknown: Failed opening required '/home/aulaundc/public_html/malbuster/mbconnector.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in Unknown on line 0
+[08-Oct-2022 11:17:42 America/Lima] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.3.33. in /home/aulaundc/public_html/asistencia_cas/vendor/composer/platform_check.php on line 24
+[08-Oct-2022 11:28:03 America/Lima] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.3.33. in /home/aulaundc/public_html/asistencia_cas/vendor/composer/platform_check.php on line 24
+[08-Oct-2022 11:32:41 America/Lima] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.3.33. in /home/aulaundc/public_html/asistencia_cas/vendor/composer/platform_check.php on line 24
+[09-Oct-2022 08:58:27 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function formato_fecha() on null in /home/aulaundc/public_html/asistencia_cas/view/admin/asistencia_cas.php:92
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/rutas/admin_router.php(7): include()
+#1 /home/aulaundc/public_html/asistencia_cas/rutas/index.php(3): include('/home/aulaundc/...')
+#2 /home/aulaundc/public_html/asistencia_cas/view/template/content.php(3): include('/home/aulaundc/...')
+#3 /home/aulaundc/public_html/asistencia_cas/view/template/index.php(37): include('/home/aulaundc/...')
+#4 /home/aulaundc/public_html/asistencia_cas/index.php(7): include('/home/aulaundc/...')
+#5 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/view/admin/asistencia_cas.php on line 92
+[11-Oct-2022 09:25:04 America/Lima] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aulaundc_asistencia_cas.registro_asistencia_administrativos_nuevo' doesn't exist in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php:19
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/models/personal.model.php(19): PDOStatement->execute()
+#1 /home/aulaundc/public_html/asistencia_cas/controllers/personal.controller.php(14): PersonalModel->get_asi_reg('45537967')
+#2 /home/aulaundc/public_html/asistencia_cas/view/admin/asistencia_cas.php(89): PersonalController->listar_asistencia('45537967')
+#3 /home/aulaundc/public_html/asistencia_cas/rutas/admin_router.php(7): include('/home/aulaundc/...')
+#4 /home/aulaundc/public_html/asistencia_cas/rutas/index.php(3): include('/home/aulaundc/...')
+#5 /home/aulaundc/public_html/asistencia_cas/view/template/content.php(3): include('/home/aulaundc/...')
+#6 /home/aulaundc/public_html/asistencia_cas/view/template/index.php(37): include('/home/aulaundc/...')
+#7 /home/aula in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php on line 19
+[11-Oct-2022 09:25:34 America/Lima] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aulaundc_asistencia_cas.registro_asistencia_administrativos_nuevo' doesn't exist in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php:19
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/models/personal.model.php(19): PDOStatement->execute()
+#1 /home/aulaundc/public_html/asistencia_cas/controllers/personal.controller.php(14): PersonalModel->get_asi_reg('45537967')
+#2 /home/aulaundc/public_html/asistencia_cas/view/admin/asistencia_cas.php(89): PersonalController->listar_asistencia('45537967')
+#3 /home/aulaundc/public_html/asistencia_cas/rutas/admin_router.php(7): include('/home/aulaundc/...')
+#4 /home/aulaundc/public_html/asistencia_cas/rutas/index.php(3): include('/home/aulaundc/...')
+#5 /home/aulaundc/public_html/asistencia_cas/view/template/content.php(3): include('/home/aulaundc/...')
+#6 /home/aulaundc/public_html/asistencia_cas/view/template/index.php(37): include('/home/aulaundc/...')
+#7 /home/aula in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php on line 19
+[11-Oct-2022 09:25:45 America/Lima] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aulaundc_asistencia_cas.registro_asistencia_administrativos_nuevo' doesn't exist in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php:19
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/models/personal.model.php(19): PDOStatement->execute()
+#1 /home/aulaundc/public_html/asistencia_cas/controllers/personal.controller.php(14): PersonalModel->get_asi_reg('45537967')
+#2 /home/aulaundc/public_html/asistencia_cas/view/admin/asistencia_cas.php(89): PersonalController->listar_asistencia('45537967')
+#3 /home/aulaundc/public_html/asistencia_cas/rutas/admin_router.php(7): include('/home/aulaundc/...')
+#4 /home/aulaundc/public_html/asistencia_cas/rutas/index.php(3): include('/home/aulaundc/...')
+#5 /home/aulaundc/public_html/asistencia_cas/view/template/content.php(3): include('/home/aulaundc/...')
+#6 /home/aulaundc/public_html/asistencia_cas/view/template/index.php(37): include('/home/aulaundc/...')
+#7 /home/aula in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php on line 19
+[14-Oct-2022 00:30:40 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function format() on null in /home/aulaundc/public_html/asistencia_cas/view/admin/personal_cas.php:32
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/rutas/admin_router.php(15): include()
+#1 /home/aulaundc/public_html/asistencia_cas/rutas/index.php(3): include('/home/aulaundc/...')
+#2 /home/aulaundc/public_html/asistencia_cas/view/template/content.php(3): include('/home/aulaundc/...')
+#3 /home/aulaundc/public_html/asistencia_cas/view/template/index.php(37): include('/home/aulaundc/...')
+#4 /home/aulaundc/public_html/asistencia_cas/index.php(11): include('/home/aulaundc/...')
+#5 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/view/admin/personal_cas.php on line 32
+[14-Oct-2022 00:30:52 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function format() on null in /home/aulaundc/public_html/asistencia_cas/view/admin/personal_cas.php:32
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/rutas/admin_router.php(15): include()
+#1 /home/aulaundc/public_html/asistencia_cas/rutas/index.php(3): include('/home/aulaundc/...')
+#2 /home/aulaundc/public_html/asistencia_cas/view/template/content.php(3): include('/home/aulaundc/...')
+#3 /home/aulaundc/public_html/asistencia_cas/view/template/index.php(37): include('/home/aulaundc/...')
+#4 /home/aulaundc/public_html/asistencia_cas/index.php(11): include('/home/aulaundc/...')
+#5 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/view/admin/personal_cas.php on line 32
+[02-Nov-2022 12:07:17 America/Lima] PHP Warning:  include(./helper/local_undc.php): failed to open stream: No such file or directory in /home/aulaundc/public_html/asistencia_cas/index.php on line 7
+[02-Nov-2022 12:07:17 America/Lima] PHP Warning:  include(): Failed opening './helper/local_undc.php' for inclusion (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/aulaundc/public_html/asistencia_cas/index.php on line 7
+[02-Nov-2022 12:07:17 America/Lima] PHP Fatal error:  Uncaught Error: Class 'LocalUndc' not found in /home/aulaundc/public_html/asistencia_cas/controllers/personal.controller.php:6
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/view/admin/asistencia_cas.php(4): PersonalController->__construct()
+#1 /home/aulaundc/public_html/asistencia_cas/rutas/admin_router.php(7): include('/home/aulaundc/...')
+#2 /home/aulaundc/public_html/asistencia_cas/rutas/index.php(3): include('/home/aulaundc/...')
+#3 /home/aulaundc/public_html/asistencia_cas/view/template/content.php(3): include('/home/aulaundc/...')
+#4 /home/aulaundc/public_html/asistencia_cas/view/template/index.php(37): include('/home/aulaundc/...')
+#5 /home/aulaundc/public_html/asistencia_cas/index.php(12): include('/home/aulaundc/...')
+#6 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/controllers/personal.controller.php on line 6
+[02-Nov-2022 12:07:51 America/Lima] PHP Warning:  include(./helper/local_undc.php): failed to open stream: No such file or directory in /home/aulaundc/public_html/asistencia_cas/index.php on line 7
+[02-Nov-2022 12:07:51 America/Lima] PHP Warning:  include(): Failed opening './helper/local_undc.php' for inclusion (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/aulaundc/public_html/asistencia_cas/index.php on line 7
+[02-Nov-2022 12:07:51 America/Lima] PHP Fatal error:  Uncaught Error: Class 'LocalUndc' not found in /home/aulaundc/public_html/asistencia_cas/controllers/personal.controller.php:6
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/view/admin/asistencia_cas.php(4): PersonalController->__construct()
+#1 /home/aulaundc/public_html/asistencia_cas/rutas/admin_router.php(7): include('/home/aulaundc/...')
+#2 /home/aulaundc/public_html/asistencia_cas/rutas/index.php(3): include('/home/aulaundc/...')
+#3 /home/aulaundc/public_html/asistencia_cas/view/template/content.php(3): include('/home/aulaundc/...')
+#4 /home/aulaundc/public_html/asistencia_cas/view/template/index.php(37): include('/home/aulaundc/...')
+#5 /home/aulaundc/public_html/asistencia_cas/index.php(12): include('/home/aulaundc/...')
+#6 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/controllers/personal.controller.php on line 6
+[02-Nov-2022 12:09:05 America/Lima] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aulaundc_asistencia_cas.registro_asistencia_administrativos_nuevo' doesn't exist in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php:40
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/models/personal.model.php(40): PDOStatement->execute()
+#1 /home/aulaundc/public_html/asistencia_cas/controllers/personal.controller.php(16): PersonalModel->get_asi_reg_grp_by_fec_reg('45507521')
+#2 /home/aulaundc/public_html/asistencia_cas/view/admin/asistencia_cas.php(92): PersonalController->listar_asistencia('45507521')
+#3 /home/aulaundc/public_html/asistencia_cas/rutas/admin_router.php(7): include('/home/aulaundc/...')
+#4 /home/aulaundc/public_html/asistencia_cas/rutas/index.php(3): include('/home/aulaundc/...')
+#5 /home/aulaundc/public_html/asistencia_cas/view/template/content.php(3): include('/home/aulaundc/...')
+#6 /home/aulaundc/public_html/asistencia_cas/view/template/index.php(37): include('/home/aulaundc/...' in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php on line 40
+[11-Jan-2023 11:34:06 America/Lima] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aulaundc_asistencia_cas.registro_asistencia_administrativos' doesn't exist in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php:40
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/models/personal.model.php(40): PDOStatement->execute()
+#1 /home/aulaundc/public_html/asistencia_cas/controllers/personal.controller.php(16): PersonalModel->get_asi_reg_grp_by_fec_reg('45507521')
+#2 /home/aulaundc/public_html/asistencia_cas/view/admin/asistencia_cas.php(105): PersonalController->listar_asistencia('45507521')
+#3 /home/aulaundc/public_html/asistencia_cas/rutas/admin_router.php(7): include('/home/aulaundc/...')
+#4 /home/aulaundc/public_html/asistencia_cas/rutas/index.php(3): include('/home/aulaundc/...')
+#5 /home/aulaundc/public_html/asistencia_cas/view/template/content.php(3): include('/home/aulaundc/...')
+#6 /home/aulaundc/public_html/asistencia_cas/view/template/index.php(37): include('/home/aulaundc/...')
+#7  in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php on line 40

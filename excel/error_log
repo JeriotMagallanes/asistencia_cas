@@ -1,0 +1,23 @@
+[14-Oct-2022 00:31:44 America/Lima] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aulaundc_asistencia_cas.registro_asistencia_administrativos_nuevo' doesn't exist in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php:29
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/models/personal.model.php(29): PDOStatement->execute()
+#1 /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php(65): PersonalModel->asi_filtr_fec('21434669', '2022-09-14', '')
+#2 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php on line 29
+[14-Oct-2022 00:34:09 America/Lima] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aulaundc_asistencia_cas.registro_asistencia_administrativos_nuevo' doesn't exist in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php:29
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/models/personal.model.php(29): PDOStatement->execute()
+#1 /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php(65): PersonalModel->asi_filtr_fec('21434669', '2022-10-03', '2022-10-14')
+#2 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/models/personal.model.php on line 29
+[03-Nov-2022 08:42:27 America/Lima] PHP Warning:  include(../helper/locales.php): failed to open stream: No such file or directory in /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php on line 5
+[03-Nov-2022 08:42:27 America/Lima] PHP Warning:  include(): Failed opening '../helper/locales.php' for inclusion (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php on line 5
+[03-Nov-2022 08:42:27 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php:5) in /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php on line 12
+[03-Nov-2022 08:42:27 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php:5) in /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php on line 13
+[03-Nov-2022 08:42:27 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php:5) in /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php on line 14
+[03-Nov-2022 08:42:27 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php:5) in /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php on line 15
+[03-Nov-2022 08:42:27 America/Lima] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php:5) in /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php on line 17
+[03-Nov-2022 08:42:27 America/Lima] PHP Fatal error:  Uncaught Error: Class 'Local' not found in /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/excel/back_up_general.php on line 20

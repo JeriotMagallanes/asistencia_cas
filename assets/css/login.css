@@ -1,0 +1,16 @@
+.cepre-title{
+    font-size: 45px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+    color:#000063;
+}
+.mg-on-movile{
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    .mg-on-movile{
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }

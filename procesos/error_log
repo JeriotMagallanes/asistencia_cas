@@ -1,0 +1,139 @@
+[08-Oct-2022 11:42:22 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php:520
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(16): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php on line 520
+[08-Oct-2022 11:44:00 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php:520
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(16): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php on line 520
+[08-Oct-2022 11:44:13 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php:520
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(16): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php on line 520
+[08-Oct-2022 11:44:18 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php:520
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(16): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php on line 520
+[08-Oct-2022 11:44:41 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php:520
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(16): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php on line 520
+[08-Oct-2022 11:49:14 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php:520
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(16): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php on line 520
+[08-Oct-2022 11:59:55 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php:520
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(16): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php on line 520
+[08-Oct-2022 12:00:00 America/Lima] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/aulaundc/public_html/asistencia_cas/vendor/psr/log/src/LoggerInterface.php on line 30
+[08-Oct-2022 12:00:35 America/Lima] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/aulaundc/public_html/asistencia_cas/vendor/psr/log/src/LoggerInterface.php on line 30
+[08-Oct-2022 12:08:21 America/Lima] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/aulaundc/public_html/asistencia_cas/vendor/psr/log/src/LoggerInterface.php on line 30
+[08-Oct-2022 12:09:37 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php:520
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(16): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/vendor/google/apiclient/src/Client.php on line 520
+[08-Oct-2022 12:09:47 America/Lima] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/aulaundc/public_html/asistencia_cas/vendor/psr/log/src/LoggerInterface.php on line 43
+[08-Oct-2022 22:05:11 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 32
+[08-Oct-2022 22:05:11 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 33
+[08-Oct-2022 22:22:19 America/Lima] PHP Warning:  syntax error, unexpected '!' in configuracion.ini on line 6
+ in /home/aulaundc/public_html/asistencia_cas/conexion/pdo_conexion.php on line 6
+[08-Oct-2022 22:22:19 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 32
+[08-Oct-2022 22:22:19 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 33
+[08-Oct-2022 22:22:28 America/Lima] PHP Warning:  syntax error, unexpected '!' in configuracion.ini on line 6
+ in /home/aulaundc/public_html/asistencia_cas/conexion/pdo_conexion.php on line 6
+[08-Oct-2022 22:22:28 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 32
+[08-Oct-2022 22:22:28 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 33
+[08-Oct-2022 22:22:52 America/Lima] PHP Warning:  syntax error, unexpected '!' in configuracion.ini on line 6
+ in /home/aulaundc/public_html/asistencia_cas/conexion/pdo_conexion.php on line 6
+[08-Oct-2022 22:22:52 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 32
+[08-Oct-2022 22:22:52 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 33
+[08-Oct-2022 22:26:47 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/boletasdepago/librerias/google7/src/Client.php:503
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(26): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/boletasdepago/librerias/google7/src/Client.php on line 503
+[08-Oct-2022 22:26:59 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 32
+[08-Oct-2022 22:26:59 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 33
+[08-Oct-2022 22:28:47 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 32
+[08-Oct-2022 22:28:47 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 33
+[08-Oct-2022 22:29:32 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/boletasdepago/librerias/google7/src/Client.php:503
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(26): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/boletasdepago/librerias/google7/src/Client.php on line 503
+[08-Oct-2022 22:36:31 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 32
+[08-Oct-2022 22:36:31 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 33
+[08-Oct-2022 22:46:34 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/boletasdepago/librerias/google7/src/Client.php:503
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(26): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/boletasdepago/librerias/google7/src/Client.php on line 503
+[08-Oct-2022 22:48:02 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 32
+[08-Oct-2022 22:48:02 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 33
+[08-Oct-2022 22:57:48 America/Lima] PHP Fatal error:  Uncaught Error: Class 'Conexion' not found in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 27
+[08-Oct-2022 22:59:22 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 28
+[08-Oct-2022 22:59:22 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 29
+[08-Oct-2022 23:14:24 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 28
+[08-Oct-2022 23:14:24 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 29
+[09-Oct-2022 00:18:37 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 28
+[09-Oct-2022 00:18:37 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 29
+[09-Oct-2022 08:27:52 America/Lima] PHP Warning:  PDO::prepare(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 28
+[09-Oct-2022 08:27:52 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php on line 29
+[09-Oct-2022 14:33:40 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/boletasdepago/librerias/google7/src/Client.php:503
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(22): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/boletasdepago/librerias/google7/src/Client.php on line 503
+[13-Dec-2022 09:58:23 America/Lima] PHP Fatal error:  Uncaught InvalidArgumentException: Invalid token format in /home/aulaundc/public_html/boletasdepago/librerias/google7/src/Client.php:503
+Stack trace:
+#0 /home/aulaundc/public_html/asistencia_cas/procesos/login_google.php(22): Google\Client->setAccessToken(Array)
+#1 {main}
+  thrown in /home/aulaundc/public_html/boletasdepago/librerias/google7/src/Client.php on line 503
