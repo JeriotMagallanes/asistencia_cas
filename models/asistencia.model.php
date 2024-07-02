@@ -5,6 +5,23 @@ class AsistenciaModel
     public function __construct(){
         $this->con = new pdo_conexion;
     }
+    // Función para insertar registros de asistencia en la base de datos
+    public function insertarAsistencia($dni, $mes, $anio, $total_tardanza_min, $total_tardanza_descuento, $total_tardanza_horas, $total_dias_inasistidos) {
+        $qry = $this->con->prepare("INSERT INTO descuentos_asistencia (dni, mes, anio, total_tardanza_min, total_tardanza_descuento, total_tardanza_horas, total_dias_inasistidos) VALUES (:dni, :mes, :anio, :total_tardanza_min, :total_tardanza_descuento, :total_tardanza_horas, :total_dias_inasistidos)");
+        $qry->bindParam(":dni", $dni);
+        $qry->bindParam(":mes", $mes);
+        $qry->bindParam(":anio", $anio);
+        $qry->bindParam(":total_tardanza_min", $total_tardanza_min);
+        $qry->bindParam(":total_tardanza_descuento", $total_tardanza_descuento);
+        $qry->bindParam(":total_tardanza_horas", $total_tardanza_horas);
+        $qry->bindParam(":total_dias_inasistidos", $total_dias_inasistidos);
+        
+        if ($qry->execute()) {
+            return true; // Éxito al insertar
+        } else {
+            return false; // Error al insertar
+        }
+    }
     public function select_asistencia_group_fecha($dni){
         $qry = $this->con->prepare("SELECT * FROM registro_asistencia_administrativos rad inner join personal_administrativo pa on rad.dni_doce=pa.dni_pa 
         WHERE rad.dni_doce=:dni group by rad.fecha_registro order by date_format(str_to_date(fecha_registro,'%d-%m-%Y'),'%Y-%m-%d') desc");

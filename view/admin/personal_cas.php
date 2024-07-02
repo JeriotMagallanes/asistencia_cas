@@ -47,7 +47,15 @@
                   </div>
                   <div class="col-mb-3">
                     <a target="_blank" href="index.php?busqueda=asistencia_general">
-                        <button class="btn btn-success" id="btn_reporte_general_tardanzas">Reporte Asistencia</button>
+                        <button class="btn btn-warning" id="btn_reporte_general_tardanzas">Reporte Asistencia</button>
+                    </a>
+                  </div>
+                  <div class="col-mb-3">
+                    <button class="btn btn-warning" id="btn_importar_asistencias" onclick='importar_asistencia()'>Importar Asistencias</button>
+                  </div>
+                  <div class="col-mb-3">
+                    <a target="_blank" href="index.php?busqueda=reporte_planilla">
+                        <button class="btn btn-warning" id="btn_reporte_planilla">Ver Planillas</button>
                     </a>
                   </div>
                 </div>
@@ -307,6 +315,59 @@
   </div>
 </div>
 <!-- END MODAL EDITAR DATOS -->
+<div class="modal" id="modal_importar_asistencia" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Importar Asistencias</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="./procesos/admin/importar_asistencias.php" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-lg-6 mb-3">
+              <label for="mes">Mes</label>
+              <select class="form-control" name="mes" id="mes" required>
+                <option value="1">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+              </select>
+            </div>
+            <div class="col-lg-6 mb-3">
+              <label for="anio">Año</label>
+              <select class="form-control" name="anio" id="anio" required>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <!-- Puedes agregar más años si es necesario -->
+              </select>
+            </div>
+            <div class="col-lg-12 mb-3">
+              <label for="archivo">Subir Archivo</label>
+              <input class="form-control" type="file" name="archivo" id="archivo" required>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script src="./js/datatable.js"></script>
 <script>
   $(document).ready( function () {
@@ -322,6 +383,9 @@
   $("#btn_add_per_cas").click(function(){
     $("#modal_add_per_cas").modal("show")
   })
+  function importar_asistencia(){
+    $("#modal_importar_asistencia").modal("show")
+  }
   function editar_personal(personal){
     let datos = JSON.parse(personal)
     $("#ed_id_personal").val("")

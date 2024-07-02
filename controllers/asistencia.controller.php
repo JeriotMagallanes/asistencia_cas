@@ -5,6 +5,36 @@ class AsistenciaController
     public function __construct(){
         $this->asimodel = new AsistenciaModel;
     }
+    // Función para importar asistencias desde un archivo Excel
+    public function importarAsistencias($datos_asistencia) {
+        $resultados = [
+            'estado' => 0,
+            'mensaje' => ''
+        ];
+
+        foreach ($datos_asistencia as $asistencia) {
+            // Extraer datos del array de asistencia
+            $dni = $asistencia[0]; // Ajusta según la estructura de tu archivo Excel
+            $total_tardanza_min = $asistencia[1]; // Ajusta según la estructura de tu archivo Excel
+            $total_tardanza_descuento = $asistencia[2]; // Ajusta según la estructura de tu archivo Excel
+            $total_tardanza_horas = $asistencia[3]; // Ajusta según la estructura de tu archivo Excel
+            $total_dias_inasistidos = $asistencia[4]; // Ajusta según la estructura de tu archivo Excel
+            $mes = $asistencia[5]; // Extraído del formulario de importación
+            $anio = $asistencia[6]; // Extraído del formulario de importación
+
+            // Insertar asistencia en la base de datos
+            $resultado = $this->asimodel->insertarAsistencia($dni, $mes, $anio, $total_tardanza_min, $total_tardanza_descuento, $total_tardanza_horas, $total_dias_inasistidos);
+
+            if ($resultado) {
+                $resultados['estado'] = 1;
+            } else {
+                $resultados['mensaje'] = 'Error al insertar la asistencia para el DNI: ' . $dni;
+                break;
+            }
+        }
+
+        return $resultados;
+    }
     public function listar_mi_asistencia($dni){
         $data = [];
         $registros = $this->asimodel->select_asistencia_group_fecha($dni);
