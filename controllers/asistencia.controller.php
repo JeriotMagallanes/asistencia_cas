@@ -1,40 +1,44 @@
 <?php
+require '../../models/asistencia.model.php';
+require '../../vendor/autoload.php';
+
+use PhpOffice\PhpSpreadsheet\IOFactory;
+
 class AsistenciaController
 {
     private $asimodel;
     public function __construct(){
         $this->asimodel = new AsistenciaModel;
     }
-    // Función para importar asistencias desde un archivo Excel
-    public function importarAsistencias($datos_asistencia) {
-        $resultados = [
-            'estado' => 0,
-            'mensaje' => ''
-        ];
-
-        foreach ($datos_asistencia as $asistencia) {
-            // Extraer datos del array de asistencia
-            $dni = $asistencia[0]; // Ajusta según la estructura de tu archivo Excel
-            $total_tardanza_min = $asistencia[1]; // Ajusta según la estructura de tu archivo Excel
-            $total_tardanza_descuento = $asistencia[2]; // Ajusta según la estructura de tu archivo Excel
-            $total_tardanza_horas = $asistencia[3]; // Ajusta según la estructura de tu archivo Excel
-            $total_dias_inasistidos = $asistencia[4]; // Ajusta según la estructura de tu archivo Excel
-            $mes = $asistencia[5]; // Extraído del formulario de importación
-            $anio = $asistencia[6]; // Extraído del formulario de importación
-
-            // Insertar asistencia en la base de datos
-            $resultado = $this->asimodel->insertarAsistencia($dni, $mes, $anio, $total_tardanza_min, $total_tardanza_descuento, $total_tardanza_horas, $total_dias_inasistidos);
-
-            if ($resultado) {
-                $resultados['estado'] = 1;
-            } else {
-                $resultados['mensaje'] = 'Error al insertar la asistencia para el DNI: ' . $dni;
-                break;
-            }
+    
+  
+    public function importarAsistencia($filePath, $mes, $anio) {
+        // Validar mes y año
+        if (($mes < 1 || $mes > 12) || ($anio != 2023 && $anio != 2024)) {
+            echo "Mes o año no válidos.";
+            return;
         }
 
-        return $resultados;
+        $spreadsheet = IOFactory::load($filePath);
+        $worksheet = $spreadsheet->getActiveSheet();
+        $rows = $worksheet->toArray();
+
+        $data = [];
+        foreach ($rows as $index => $row) {
+            if ($index == 0) continue; // Saltar la fila del encabezado
+
+            $data[] = [
+                'Dni' => $row[0],
+                'Total Tardanza (min)' => $row[1],
+                'Total Tardanza descuento' => $row[2],
+                'Total Tardanza horas' => $row[3],
+                'Total días inasistidos' => $row[4]
+            ];
+        }
+
+        $this->asimodel->importarAsistencia($data, $mes, $anio); // Corregido: $this->asimodel en lugar de $this->model
     }
+
     public function listar_mi_asistencia($dni){
         $data = [];
         $registros = $this->asimodel->select_asistencia_group_fecha($dni);

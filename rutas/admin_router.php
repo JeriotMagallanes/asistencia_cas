@@ -7,6 +7,14 @@ switch ($s) {
     case 'personal_cas':
         include "./view/admin/personal_cas.php";
         break;
+    case 'importar_asistencia':
+        include "./view/admin/importar_asistencia.php";
+        break;
+    case 'reporte_planilla':
+        $_GET['sel_mes_ini'] = $mes;
+        $_GET['sel_anio'] = $anio;
+        include "./view/admin/reporte_planilla.php";
+        break;
     case 'asistencia_general':
         $_GET['sel_mes_ini'] = $mes;
         $_GET['sel_anio'] = $anio;
