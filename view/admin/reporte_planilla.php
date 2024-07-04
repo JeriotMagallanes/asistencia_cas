@@ -81,6 +81,12 @@ $planilla = new PlanillaController();
                         <th>Días Inasistidos (Desc)</th>
                         <th>Remuneración Bruta</th>
                         <th>SNP/AFP</th>
+                        <th>Tipo AFP</th>
+                        <th>Aporte ONP (13%)</th>
+                        <th>Aporte AFP (10%)</th>
+                        <th>Prima Seguro (1.7%)</th>
+                        <th>Renta 4ta</th>
+                        <th>Remuneracion Neta</th>
                     </thead>
                     
                     <tbody>
@@ -104,6 +110,26 @@ $planilla = new PlanillaController();
                                 // Calcula la remuneración bruta
                                 $remuneracionBruta = $sueldoBase + $N311 - $descuentoHoras - $descuentoDiasInasistidos;
                                 $remuneracionBruta = number_format($remuneracionBruta, 2, '.', ''); // Formatea a 2 decimales
+                                $primaSeguro=0;
+                                $aporte=$pla["afp"];
+                                $aporteONP = 0;
+                                $aporteAFP = 0;
+                                $rentaCuarta=$pla["retencion_4cat"];
+                                $descuentoRenta=0;
+                                if($aporte==='ONP'){
+                                  $aporteONP=$remuneracionBruta*0.13;
+                                  $aporteONP = number_format($aporteONP, 2, '.', ''); // Formatea a 2 decimales
+                                }else{
+                                  $aporteAFP=$remuneracionBruta*0.10;
+                                  $aporteAFP = number_format($aporteAFP, 2, '.', ''); // Formatea a 2 decimales
+                                  $primaSeguro=$remuneracionBruta*0.017;
+                                  $primaSeguro = number_format($primaSeguro, 2, '.', ''); // Formatea a 2 decimales
+                                }   
+                                if($rentaCuarta==='SI'){
+                                  $descuentoRenta=$remuneracionBruta*0.08;
+                                  $descuentoRenta = number_format($descuentoRenta, 2, '.', ''); // Formatea a 2 decimales
+                                }  
+                                $remuneracionNeta=$remuneracionBruta-$descuentoRenta-$primaSeguro-$aporteAFP-$aporteONP;               
                                 
                         
                         ?>
@@ -137,6 +163,12 @@ $planilla = new PlanillaController();
                                     <td><?php echo $pla["total_dias_inasistidos"] . ' (S/.' . $descuentoDiasInasistidos . ')'; ?></td>
                                     <td><?php echo 'S/.' . $remuneracionBruta; ?></td>
                                     <td><?php echo $pla["t_aportacion"];?></td>
+                                    <td><?php echo $pla["afp"];?></td>
+                                    <td><?php echo 'S/.' .$aporteONP;?></td>
+                                    <td><?php echo 'S/.' .$aporteAFP;?></td>
+                                    <td><?php echo 'S/.' .$primaSeguro;?></td>
+                                    <td><?php echo 'S/.' .$descuentoRenta;?></td>
+                                    <td><?php echo 'S/.' .$remuneracionNeta;?></td>
                                 </tr>
                         <?php
                             }
