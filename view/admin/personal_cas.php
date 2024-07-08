@@ -306,6 +306,20 @@
                 </select>
               </div>
             </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="pension">META</label>
+                <select class="form-control" id="meta" name="meta">
+                  <option value="META 0003">META 0003</option>
+                  <option value="META 0010">META 0010</option>
+                  <option value="META 0018">META 0018</option>
+                  <option value="META 0019">META 0019</option>
+                  <option value="META 0023">META 0023</option>
+                  <option value="META 0024">META 0024</option>
+                  <option value="META 0025">META 0025</option>
+                </select>
+              </div>
+            </div>
         </div>
       </div>
       <div class="modal-footer">
@@ -355,6 +369,7 @@
     $("#pension").val("")
     $("#f_ingreso").val("")
     $("#h_ingreso").val("")
+    $("#meta").val("")
     
     $("#ed_id_personal").val(datos.id_personal)    
     $("#ed_apaterno").val(datos.apaterno)
@@ -373,6 +388,7 @@
     $("#pension").val(datos.afp)
     $("#f_ingreso").val(datos.fecha_ingreso)
     $("#h_ingreso").val(datos.hora_ingreso)
+    $("#meta").val(datos.meta)
     $("#modal_edit_per_cas").modal("show")
   }
   // $("form[name='handle_submit_delete_employed']").on("submit", function(e){

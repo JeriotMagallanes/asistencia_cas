@@ -7,6 +7,14 @@ class AsistenciaModel
         $this->con = new pdo_conexion;
     }
 
+    public function eliminarAsistenciaMesAnio($mes, $anio){
+        $qry = $this->con->prepare("CALL eliminar_descuentos_por_mes_anio(:mes, :anio)");
+        $qry->bindParam(':mes', $mes, PDO::PARAM_INT);
+        $qry->bindParam(':anio', $anio, PDO::PARAM_INT);
+        $qry->execute();
+        return $qry->fetchAll();
+        }
+        
     public function importarAsistencia($data, $mes, $anio) {
         $sql = "INSERT INTO descuentos_asistencia (dni, mes, anio, total_tardanza_min, total_tardanza_descuento, total_tardanza_horas, total_dias_inasistidos)
                 VALUES (:dni, :mes, :anio, :total_tardanza_min, :total_tardanza_descuento, :total_tardanza_horas, :total_dias_inasistidos)";

@@ -74,6 +74,7 @@ $planilla = new PlanillaController();
                         <th>DNI</th>
                         <th>Nombres</th>
                         <th>Apellidos</th>
+                        <th>Meta</th>
                         <th>Fecha Ingreso</th>
                         <th>Sueldo Base</th>
                         <th>DS Nº 311-2022-EF</th>SNP/AFP
@@ -84,9 +85,13 @@ $planilla = new PlanillaController();
                         <th>Tipo AFP</th>
                         <th>Aporte ONP (13%)</th>
                         <th>Aporte AFP (10%)</th>
+                        <th>Comision de Flujo</th>
+                        <th>Comision Mixta</th>
                         <th>Prima Seguro (1.7%)</th>
                         <th>Renta 4ta</th>
                         <th>Remuneracion Neta</th>
+                        <th>ESSALUD</th>
+                        <th>Total Aportes</th>
                     </thead>
                     
                     <tbody>
@@ -116,6 +121,13 @@ $planilla = new PlanillaController();
                                 $aporteAFP = 0;
                                 $rentaCuarta=$pla["retencion_4cat"];
                                 $descuentoRenta=0;
+                                $essalud=0;
+                                if($remuneracionBruta<2700){
+                                  $essalud=$remuneracionBruta*0.09;
+                                  $essalud = number_format($essalud, 2, '.', ''); // Formatea a 2 decimales
+                                }else{
+                                  $essalud=208.58;
+                                }
                                 if($aporte==='ONP'){
                                   $aporteONP=$remuneracionBruta*0.13;
                                   $aporteONP = number_format($aporteONP, 2, '.', ''); // Formatea a 2 decimales
@@ -156,6 +168,7 @@ $planilla = new PlanillaController();
                                     <td><?php echo $pla["dni"]; ?></td>
                                     <td><?php echo $pla["nombres"]; ?></td>
                                     <td><?php echo $pla["apaterno"] . ' ' . $pla["amaterno"]; ?></td>
+                                    <td><?php echo $pla["meta"]; ?></td>
                                     <td><?php echo $pla["fecha_ingreso"]; ?></td>
                                     <td><?php echo 'S/.' . number_format($sueldoBase, 2, '.', ''); ?></td>
                                     <td><?php echo 'S/.' . number_format($N311, 2, '.', ''); ?></td>
@@ -166,9 +179,13 @@ $planilla = new PlanillaController();
                                     <td><?php echo $pla["afp"];?></td>
                                     <td><?php echo 'S/.' .$aporteONP;?></td>
                                     <td><?php echo 'S/.' .$aporteAFP;?></td>
+                                    <td><?php echo 'Comsion de Fujo'?></td>
+                                    <td><?php echo 'Comision Mixta'?></td>
                                     <td><?php echo 'S/.' .$primaSeguro;?></td>
                                     <td><?php echo 'S/.' .$descuentoRenta;?></td>
                                     <td><?php echo 'S/.' .$remuneracionNeta;?></td>
+                                    <td><?php echo 'S/.' .$essalud;?></td>
+                                    <td><?php echo 'S/.' .$essalud;?></td>
                                 </tr>
                         <?php
                             }

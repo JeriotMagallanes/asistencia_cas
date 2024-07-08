@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Año recibido: " . $anio . "<br>";
 
         $controller = new AsistenciaController();
+        $controller->eliminarAsistenciaMesAnio($mes, $anio);
         $controller->importarAsistencia($fileTmpPath, $mes, $anio);
 
         echo "<script>window.location = '../../?busqueda=importar_asistencia'</script>";

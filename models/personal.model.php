@@ -103,7 +103,7 @@ class PersonalModel extends pdo_conexion
     public function update_personal_cas($data){
         $qry = $this->con->prepare("UPDATE personal_administrativo SET amaterno=UPPER(:amaterno),apaterno=UPPER(:apaterno),nombres=UPPER(:nombres),dni_pa=:dni_pa,cel_pa=:cel_pa,cor_per=:cor_per,
         cor_inst=:cor_inst,puesto=UPPER(:puesto),dependencia=UPPER(:dependencia),Cod_AIRHSP=UPPER(:Cod_AIRHSP),sueldo_base=UPPER(:sueldo_base),retencion_4cat=UPPER(:retencion_4cat),
-        t_aportacion=UPPER(:t_aportacion),afp=UPPER(:afp),fecha_ingreso=UPPER(:fecha_ingreso)
+        t_aportacion=UPPER(:t_aportacion),afp=UPPER(:afp),fecha_ingreso=UPPER(:fecha_ingreso),meta=UPPER(:meta)
         WHERE id_personal=:id_personal");
         $qry->bindParam(":apaterno", $data["ed_apaterno"]);
         $qry->bindParam(":amaterno", $data["ed_amaterno"]);
@@ -121,6 +121,7 @@ class PersonalModel extends pdo_conexion
         $qry->bindParam(":afp", $data["pension"]);
         $qry->bindParam(":fecha_ingreso", $data["f_ingreso"]);
         $qry->bindParam(":id_personal", $data["ed_id_personal"]);
+        $qry->bindParam(":meta", $data["meta"]);
         if ($qry->execute()) {
             return 1;
         }

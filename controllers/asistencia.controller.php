@@ -10,8 +10,10 @@ class AsistenciaController
     public function __construct(){
         $this->asimodel = new AsistenciaModel;
     }
-    
   
+    public function eliminarAsistenciaMesAnio($mes, $anio){
+        return $this->asimodel->eliminarAsistenciaMesAnio($mes, $anio);
+    }
     public function importarAsistencia($filePath, $mes, $anio) {
         // Validar mes y año
         if (($mes < 1 || $mes > 12) || ($anio != 2023 && $anio != 2024)) {
